@@ -1,0 +1,40 @@
+{
+  "name": "v2componentsbuilder",
+  "version": "2.0.0",
+  "description": "A discord.js v2components builder",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tsc --project tsconfig.cjs.json",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "discord",
+    "components",
+    "builder",
+    "discord-api-types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoldenDev4825/V2ComponentBuilder.git"
+  },
+  "author": "Golden Development",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/GoldenDev4825/V2ComponentBuilder/issues"
+  },
+  "homepage": "https://github.com/GoldenDev4825/V2ComponentBuilder#readme",
+  "dependencies": {
+    "discord-api-types": "^0.38.21"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.3.3"
+  }
+}
