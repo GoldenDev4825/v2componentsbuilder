@@ -1,0 +1,5 @@
+export type ConstrainedArray<T, Min extends number, Max extends number> = T[] & {
+    length: Exclude<Min, Max> extends never ? number : Min | (Min extends number ? number : never);
+} & {
+    length: number extends Max ? number : number extends Min ? never : number;
+};
